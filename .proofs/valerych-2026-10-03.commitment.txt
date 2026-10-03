@@ -1,0 +1,16 @@
+VALERYCH_TIME_PROOF_COMMITMENT_V1
+hash_algorithm=SHA-256
+canonical_message_sha256=0db37434e3d4b5b5d676cc299bcc4ecdcc04faa654d764b2c767ee1248d37639
+canonical_message_utf8_bytes=464
+
+drand_network=quicknet
+drand_chain_hash=52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971
+future_round=32730852
+future_round_time_utc=2026-10-03T02:52:00Z
+
+Verification:
+1. Obtain the private canonical message from the conversation/memory.
+2. Encode exactly as UTF-8 with LF line endings and a final LF.
+3. Verify SHA-256 equals canonical_message_sha256 above.
+4. Fetch drand Quicknet round 32730852 from an official relay and verify its BLS signature.
+5. Verify this Git commit existed before that future round became available.
